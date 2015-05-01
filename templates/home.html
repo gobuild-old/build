@@ -1,0 +1,49 @@
+{{template "base/base.html" .}}
+{{template "base/common.html" .}}
+
+{{define "body"}}
+<div class="container-fluid" style="margin-top:80px;">
+<div class="row">
+	<div class="jumbotron col-md-10 col-md-offset-1">
+	     <p>Build main Go package</p>
+	     <div class="input-group input-group-lg">
+             	  <input onkeypress="return handleEnter(event)" type="text" class="form-control" placeholder="repository address, e.g. github.com/user/project" id="repo"/>
+                  <span class="input-group-btn">
+                  	<button class="btn btn-info" type="button" onclick="parent.location='/'+document.getElementById('repo').value"><span class="glyphicon glyphicon-wrench"></span> Build</button>
+                  </span>
+             </div>
+	</div>
+</div>
+
+<div class="row">
+            <div class="col-md-6">
+	    	 <div class="list-group">
+  		      <a class="list-group-item active">Most popular repositories</a>
+  		      
+		      <a href="/github.com/go-martini/martini" class="list-group-item">github.com/go-martini/martini<span class="badge">94.4%</span></a>
+		      
+		      <a href="/github.com/yosssi/rendergold" class="list-group-item">github.com/yosssi/rendergold<span class="badge">100.0%</span></a>
+		      
+		      <a href="/github.com/asaskevich/govalidator" class="list-group-item">github.com/asaskevich/govalidator<span class="badge">92.3%</span></a>
+		      
+		      <a href="/github.com/go-fsnotify/fsnotify" class="list-group-item">github.com/go-fsnotify/fsnotify<span class="badge">83.3%</span></a>
+		      
+		 </div>
+            </div>
+            <div class="col-md-6">
+	    	 <div class="list-group">
+  		      <a class="list-group-item active">Last repositories build</a>
+  		      
+		      <a href="/github.com/lunny/tango" class="list-group-item">github.com/lunny/tango<span class="badge">83.2%</span></a>
+		      
+		      <a href="/github.com/go-martini/martini" class="list-group-item">github.com/go-martini/martini<span class="badge">94.4%</span></a>
+		      
+		      <a href="/github.com/dbrain/soggy" class="list-group-item">github.com/dbrain/soggy<span class="badge">36.7%</span></a>
+		      
+		      <a href="/github.com/rightscale/rsc" class="list-group-item">github.com/rightscale/rsc<span class="badge">80.2%</span></a>
+		      
+		 </div>
+            </div>
+        </div>
+</div>
+{{end}}
